@@ -2,9 +2,12 @@
 \usepackage{hyphenat}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[margin=0.25in]{geometry}
+\usepackage[includehead,margin=0.25in,headheight=60pt]{geometry}
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage{fancyhdr}
+
+
 
 \titleformat{\section}
   {\huge\bfseries}{}{1em}{}[\titlerule]
@@ -14,20 +17,20 @@
   {\normalsize\bfseries}{}{1em}{}
 
 
-
 \begin{document}
-
-\begin{figure}[t!]
-    \includegraphics[width=.2\linewidth]{portrait.jpg}
-\end{figure}
+\pagestyle{fancy}
 
 \author{Timur Hassan}
 \title{Data Science Resume}
 
+\fancyhf{} % clear existing header/footer entries
+\fancyhead[C]{Timur Hassan \\ Data Scientist}
+\fancyhead[L]{\includegraphics[height=48pt]{portrait.jpg}}
 
-\maketitle
+%%\maketitle
 
-\section{Career Profile}
+%%\section{Career Profile}
+
 Timur is an experienced Data Scientist with over 15 years of experience analysing and interpreting data to provide actionable insights. He has mastered a range of tools and technologies such as R, SAS and SQL. Timur is passionate about analytics and believes that wherever there is information, there are valuable patterns to be identified.
 
 Timur's passion for coding and improving systems has influenced projects to use languages and technological platforms such as R, Git, Cloud servers and massively-parallel GPU
