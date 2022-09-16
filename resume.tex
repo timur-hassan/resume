@@ -6,7 +6,7 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{fancyhdr}
-
+\usepackage{ifthen}
 
 %% TITLE FORMAT
 \titleformat{\section}
@@ -27,9 +27,11 @@
 
 \pagestyle{fancy}
 \fancyhf{} % clear existing header/footer entries
-\fancyhead[L]{\includegraphics[height=54pt]{portrait.jpg}}
-\fancyhead[C]{\huge{\textbf{Timur Hassan}} \\ \large{Data Scientist} }
-\fancyhead[R]{Australian Citizen \\ 0410327113 \\ timur.hassan@protonmail.com \\ linkedin.com/in/timur-hassan-20864818}
+\fancyhead[L]{\ifthenelse{\value{page}=1}{\includegraphics[height=54pt]{portrait.jpg}}{}}
+\fancyhead[C]{\ifthenelse{\value{page}=1}{\huge{\textbf{Timur Hassan}} \\ \large{Data Scientist}}{} }
+\fancyhead[R]{\ifthenelse{\value{page}=1}{Australian Citizen \\ 0410 327 113 \\ timur.hassan@protonmail.com \\ linkedin.com/in/timur-hassan-20864818}}{}
+
+\ifthenelse{\value{page}=2}{\fancyhf{}}{}
 
 
 Timur is an experienced Data Scientist with over 15 years of experience analysing and interpreting data to provide actionable insights. He has mastered a range of tools and technologies such as R, SAS and SQL. Timur is passionate about analytics and believes that wherever there are data, there are valuable patterns to be identified.
@@ -42,7 +44,7 @@ Processing. He combines his excellent communication skills with his deep knowled
 Banking, Finance, Telecommunications, Retail, Automotive, Utilities, Government
 
 \subsection{Technical and Functional Skills:}
-Data Science, Analytics, Segmentation, Marketing, Customer Insights, Machine Learning/Deep Learning, Programming, Data Mining, Predictive Modelling/Analytics, Process Automation, A/B Testing
+Data Science, Analytics, Strong communication skills, Stakeholder management, Mentorship, Segmentation, Marketing, Customer Insights, Machine Learning/Deep Learning, Programming, Data Mining, Predictive Modelling/Analytics, Process Automation, A/B Testing
 
 \subsection{Tools and Technologies:}
 SQL, R, RStudio Server, SAS, Excel, Web Analytics (Google and Adobe), Linux Bash Scripting, Python, Tableau, AWS, Teradata
@@ -64,7 +66,7 @@ Client: National Australia Bank
         \begin{itemize}
             \item Catalogue all marketing campaign features
             \item Translate on-premesis database code to cloud platform
-            \item Liaise with Data Engineers and other stakeholders to ensure the cloud features are fit-for-purpose
+            \item Collaborate with Data Engineers and other stakeholders to ensure the cloud features are fit-for-purpose
         \end{itemize}
 \end{itemize}
 
