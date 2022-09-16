@@ -6,7 +6,7 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{fancyhdr}
-
+\usepackage{ifthen}
 
 %% TITLE FORMAT
 \titleformat{\section}
@@ -27,9 +27,11 @@
 
 \pagestyle{fancy}
 \fancyhf{} % clear existing header/footer entries
-\fancyhead[L]{\includegraphics[height=54pt]{portrait.jpg}}
-\fancyhead[C]{\huge{\textbf{Timur Hassan}} \\ \large{Data Scientist} }
-\fancyhead[R]{Australian Citizen \\ 0410327113 \\ timur.hassan@protonmail.com \\ linkedin.com/in/timur-hassan-20864818}
+\fancyhead[L]{\ifthenelse{\value{page}=1}{\includegraphics[height=54pt]{portrait.jpg}}{}}
+\fancyhead[C]{\ifthenelse{\value{page}=1}{\huge{\textbf{Timur Hassan}} \\ \large{Data Scientist}}{} }
+\fancyhead[R]{\ifthenelse{\value{page}=1}{Australian Citizen \\ 0410 327 113 \\ timur.hassan@protonmail.com \\ linkedin.com/in/timur-hassan-20864818}}{}
+
+\ifthenelse{\value{page}=2}{\fancyhf{}}{}
 
 
 Timur is an experienced Data Scientist with over 15 years of experience analysing and interpreting data to provide actionable insights. He has mastered a range of tools and technologies such as R, SAS and SQL. Timur is passionate about analytics and believes that wherever there are data, there are valuable patterns to be identified.
