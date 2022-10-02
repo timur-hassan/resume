@@ -2,7 +2,7 @@
 \usepackage{hyphenat}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[includehead,margin=0.25in,headheight=60pt]{geometry}
+\usepackage[includehead,margin=0.25in,headheight=80pt]{geometry}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{fancyhdr}
@@ -27,7 +27,7 @@
 
 \pagestyle{fancy}
 \fancyhf{} % clear existing header/footer entries
-\fancyhead[L]{\ifthenelse{\value{page}=1}{\includegraphics[height=54pt]{portrait.jpg}}{}}
+\fancyhead[L]{\ifthenelse{\value{page}=1}{\includegraphics[height=76pt]{portrait.jpg}}{}}
 \fancyhead[C]{\ifthenelse{\value{page}=1}{\huge{\textbf{Timur Hassan}} \\ \large{Data Scientist}}{} }
 \fancyhead[R]{\ifthenelse{\value{page}=1}{Australian Citizen \\ 0410 327 113 \\ timur.hassan@protonmail.com \\ linkedin.com/in/timur-hassan-20864818}}{}
 
@@ -59,13 +59,14 @@ Client: National Australia Bank
     \item Project: Refinance Cash Bonus
         \begin{itemize}
             \item Liaise with Personal Banking mortgage product owner to recommend terms and conditions for the Refinance Cashback offers
+            \item Create remediation plan to handle customer enquiries efficiently to ensure customers who missed out are fulfilled promptly
             \item Write and maintain SQL script to identify eligible customers
             \item Co-ordinate peer review of code and productionisation for automated fulfilment of the cashback offer
         \end{itemize}
-    \item Cloud migration for marketing campaigns
+    \item Cloud migration for marketing database
         \begin{itemize}
             \item Catalogue all marketing campaign features
-            \item Translate on-premesis database code to cloud platform
+            \item Translate on-premesis Teradata/Oracle feature code to AWS cloud platform
             \item Collaborate with Data Engineers and other stakeholders to ensure the cloud features are fit-for-purpose
         \end{itemize}
 \end{itemize}
