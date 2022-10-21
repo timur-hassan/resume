@@ -2,7 +2,7 @@
 \usepackage{hyphenat}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[includehead,margin=0.25in,headheight=80pt]{geometry}
+\usepackage[includehead,margin=0.25in,headheight=84pt]{geometry}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{fancyhdr}
@@ -34,10 +34,10 @@
 \ifthenelse{\value{page}=2}{\fancyhf{}}{}
 
 
-Timur is an experienced Data Scientist with over 15 years of experience analysing and interpreting data to provide actionable insights. He has mastered a range of tools and technologies such as R, SAS and SQL. Timur is passionate about analytics and believes that wherever there are data, there are valuable patterns to be identified.
+Timur is an experienced Data Scientist with over 15 years of experience analysing and interpreting data to provide actionable insights. He has mastered a range of tools and technologies such as R, SAS and SQL. Timur is passionate about analytics and believes that wherever there are data, there are valuable patterns to be discovered.
 
-Timur's passion for coding and improving information systems has influenced projects to implement languages and technologies such as R, Git, Cloud servers and massively-parallel GPU
-Processing. He combines his excellent communication skills with his deep knowledge, understanding and technical capability, to deliver exceptional data science outcomes for his clients.
+Timur's passion for coding and improving information systems has influenced his peers to implement languages and technologies such as R, Git version control, Cloud servers and 
+Parallel Processing. He combines his clear communication skills with his deep knowledge, understanding and technical capability to deliver exceptional data science outcomes for his clients.
 
 \section{Key Competencies}
 \subsection{Industries:}
@@ -52,33 +52,47 @@ SQL, R, RStudio Server, SAS, Excel, Web Analytics (Google and Adobe), Linux Bash
 %% Coles Financial Servies
 \section{Experience}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{InfoCentric (Sep 2019 to present): Data Scientist}
 Client: National Australia Bank
 \begin{itemize}
     \item Project: Refinance Cash Bonus
+
+        NAB offers a \$2,000 rebate for eligible refinance loans. To fulfil these customers, an automated process triggers a SQL scipt to query the marketing database to identify qualifying customers and deposit the funds directly into their bank account. Customers who believe they've been missed contact the support inbox (usually through their banker) and are remediated manually. I own the automated fulfilment process and coordinate the remediation.
+
+        New offers are occasionally brought to market, sometimes for different product types and other times for specific geographical areas. I liaise with the mortgage product owner to make recommendations on feasibility and commercials.
+
+Responsibilities:
+
         \begin{itemize}
             \item Liaise with Personal Banking mortgage product owner to recommend terms and conditions for the Refinance Cashback offers
             \item Create remediation plan to handle customer enquiries efficiently to ensure customers who missed out are fulfilled promptly
             \item Write and maintain SQL script to identify eligible customers
             \item Co-ordinate peer review of code and productionisation for automated fulfilment of the cashback offer
         \end{itemize}
+% NAB Cloud Migration
     \item Cloud migration for marketing database
+
+        NAB is in the process of migrating their on-prem Teradata marketing database onto a on-cloud Reshift database. All campaign features (customer profile, behavior, product holdings etc...) are being translated to cloud features. I'm involved in the scripting of these features.
+
         \begin{itemize}
-            \item Catalogue all marketing campaign features
-            \item Translate on-premesis Teradata/Oracle feature code to AWS cloud platform
+            \item Catalogue data-points used for marketing campaigns in precise data terms
+            \item Translate on-premises Teradata feature code to AWS Redshift database code
+            \item Reconcile on-prem and cloud features
             \item Collaborate with Data Engineers and other stakeholders to ensure the cloud features are fit-for-purpose
         \end{itemize}
 \end{itemize}
 
 \subsection{InfoCentric (Feb 2019 to Sep 2019): Senior Marketing Specialist}
+
 Client: Coles Financial Services
+
 \begin{itemize}
     \item Automating BAU processes:
         \begin{itemize}
-            \item Loyalty point allocation to qualifying customers
+            \item Loyalty point (FlyBuys) allocation to qualifying customers across the various products.
             \item Propensity model productionisation 
-            \item Marketing campaign feature creation to facilitate targeting (Git, Hadoop/Hive SQL, Spark)
+            \item Marketing campaign feature creation to facilitate campaign targeting (Git, Hadoop/Hive SQL, Spark)
             \item Reporting for all customer lifecycle campaigns (R, Hive, SQL)
         \end{itemize}
     \item Presenting campaign PIR’s to marketing team and product managers
@@ -95,6 +109,7 @@ Client: Coles Financial Services
 
 %% CHE Proximity 
 \subsection{CHE Proximity (Jan 2014 to Nov 2018): Data Scientist}
+Responsibilities:
 
 \begin{itemize}
     \item Propensity modelling for customer churn, next best product and repurchase using machine learning techniques (Telstra)
