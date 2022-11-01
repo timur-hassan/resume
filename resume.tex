@@ -2,7 +2,7 @@
 \usepackage{hyphenat}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[includehead,margin=0.25in,headheight=80pt]{geometry}
+\usepackage[includehead,margin=0.25in,headheight=84pt]{geometry}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{fancyhdr}
@@ -12,13 +12,13 @@
 \titleformat{\section}
   {\huge\bfseries}{}{1em}{}[\titlerule]
 \titleformat{\subsection}
-  {\large\bfseries}{}{1em}{}
+  {\large\bfseries}{}{0em}{}
 \titleformat{\subsubsection}
   {\normalsize\bfseries}{}{1em}{}
 
 %% TITLE SPACING
 \titlespacing{\subsection}
-{0em}{0em}{0em}
+{0em}{0.5em}{0em}
 
 \begin{document}
 
@@ -29,15 +29,17 @@
 \fancyhf{} % clear existing header/footer entries
 \fancyhead[L]{\ifthenelse{\value{page}=1}{\includegraphics[height=76pt]{portrait.jpg}}{}}
 \fancyhead[C]{\ifthenelse{\value{page}=1}{\huge{\textbf{Timur Hassan}} \\ \large{Data Scientist}}{} }
-\fancyhead[R]{\ifthenelse{\value{page}=1}{Australian Citizen \\ 0410 327 113 \\ timur.hassan@protonmail.com \\ linkedin.com/in/timur-hassan-20864818}}{}
+\fancyhead[R]{\ifthenelse{\value{page}=1}{Australian Citizen \\ 0410 327 113 \\ tim.h@ebconsult.com.au \\ linkedin.com/in/timur-hassan}}{}
 
 \ifthenelse{\value{page}=2}{\fancyhf{}}{}
 
 
-Timur is an experienced Data Scientist with over 15 years of experience analysing and interpreting data to provide actionable insights. He has mastered a range of tools and technologies such as R, SAS and SQL. Timur is passionate about analytics and believes that wherever there are data, there are valuable patterns to be identified.
+Timur is a Data Scientist with over 15 years of experience analysing and interpreting data to provide actionable insights. He has mastered a range of tools and technologies such as R, SQL and Cloud Computing. Timur is passionate about analytics and believes that wherever there are data, there are valuable patterns to be discovered.
 
-Timur's passion for coding and improving information systems has influenced projects to implement languages and technologies such as R, Git, Cloud servers and massively-parallel GPU
-Processing. He combines his excellent communication skills with his deep knowledge, understanding and technical capability, to deliver exceptional data science outcomes for his clients.
+\medskip
+
+\noindent
+Timur's passion for coding and streamlining information processes has influenced his team-members to implement languages and technologies such as R, Git version control, Cloud servers and Parallel Processing. He combines his clear communication skills with his deep knowledge, understanding and technical capability to deliver exceptional data science outcomes for his clients.
 
 \section{Key Competencies}
 \subsection{Industries:}
@@ -47,38 +49,61 @@ Banking, Finance, Telecommunications, Retail, Automotive, Utilities, Government
 Data Science, Analytics, Strong communication skills, Stakeholder management, Mentorship, Segmentation, Marketing, Customer Insights, Machine Learning/Deep Learning, Programming, Data Mining, Predictive Modelling/Analytics, Process Automation, A/B Testing
 
 \subsection{Tools and Technologies:}
-SQL, R, RStudio Server, SAS, Excel, Web Analytics (Google and Adobe), Linux Bash Scripting, Python, Tableau, AWS, Teradata
+SQL, R, RStudio Server, SAS, Excel, Web Analytics (Google and Adobe), Linux Bash Scripting, Python, Tableau, AWS, Terada
 
-%% Coles Financial Servies
 \section{Experience}
 
 
-\subsection{InfoCentric (Sep 2019 to present): Data Scientist}
-Client: National Australia Bank
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{InfoCentric (Sep 2019 to present): Data Scientist at National Australia Bank}
 \begin{itemize}
-    \item Project: Refinance Cash Bonus
+    \item \textbf{Project: Refinance Cash Bonus}
+
+NAB offers a \$2,000 rebate to customers who take out an eligible refinance loan.
+To fulfil these customers, an automated process triggers a SQL scipt to query the marketing database to identify qualifying customers and deposit the rebate directly into their bank account. A remediation team deals with enquiries from customers who believe they've been missed by the automated process.
+
+New offers are occasionally brought to market, some for different product types and others for specific geographical areas. I liaise with the mortgage product owner to make recommendations on feasibility and possible value to business.
+
+\textbf{Responsibilities}:
+
         \begin{itemize}
-            \item Liaise with Personal Banking mortgage product owner to recommend terms and conditions for the Refinance Cashback offers
+            \item Own the fulfilment and remediation process
+            \item Maintain and update the SQL selection scripts, making sure the correct customers are fulfilled and the process is airtight
+            \item Liaise with Mortgage product owner to recommend terms and conditions for the Refinance Cashback offers
             \item Create remediation plan to handle customer enquiries efficiently to ensure customers who missed out are fulfilled promptly
             \item Write and maintain SQL script to identify eligible customers
             \item Co-ordinate peer review of code and productionisation for automated fulfilment of the cashback offer
         \end{itemize}
-    \item Cloud migration for marketing database
+
+    \item \textbf{Project: Cloud migration for marketing campaigns}
+
+        Migrate all marketing campaign data and workflows to cloud.
+
+        NAB is migrating many of it's databases and associated functions into an AWS Redshift database. The Customer Communications and Insights (CCI) team is charged with migrating all on-prem marketing campaigns into cloud; this involved a database remodeling into a new \textit{Adobe content zone.}
+
+        As a member of CCI I'm responsible for some of these campaign migrations.
+
+        \textbf{Responsibilities:}
+
         \begin{itemize}
-            \item Catalogue all marketing campaign features
-            \item Translate on-premesis Teradata/Oracle feature code to AWS cloud platform
-            \item Collaborate with Data Engineers and other stakeholders to ensure the cloud features are fit-for-purpose
+            \item Understand campaign history and value to business to assess whether the campaign is worth the migration effort
+            \item Catalogue campaign features, investigate how other campaigns use these features, assess whether a single feature can be created that will apply to all campaigns. E.g. first loan drawdown date
+            \item Create feature script in AWS platform and reconcile the feature with the on-prem equivalent
+            \item If the right data isn't available on cloud, brief requirements to engineers
+            \item Co-ordinate with Data Engineers and Marketing Analysts to ensure the campaign is reproduced correctly on cloud and campaign is migrated correctly.
         \end{itemize}
 \end{itemize}
 
-\subsection{InfoCentric (Feb 2019 to Sep 2019): Senior Marketing Specialist}
-Client: Coles Financial Services
+\subsection{InfoCentric (Feb 2019 to Sep 2019): Senior Marketing Specialist at Coles Financial Services}
+
+\textbf{Responsibilities:}
+
 \begin{itemize}
     \item Automating BAU processes:
         \begin{itemize}
-            \item Loyalty point allocation to qualifying customers
+            \item Loyalty point (FlyBuys) allocation to qualifying customers across the various products.
             \item Propensity model productionisation 
-            \item Marketing campaign feature creation to facilitate targeting (Git, Hadoop/Hive SQL, Spark)
+            \item Marketing campaign feature creation to facilitate campaign targeting (Git, Hadoop/Hive SQL, Spark)
             \item Reporting for all customer lifecycle campaigns (R, Hive, SQL)
         \end{itemize}
     \item Presenting campaign PIR’s to marketing team and product managers
@@ -86,22 +111,27 @@ Client: Coles Financial Services
     \item Introduced team to version control (Git)
 \end{itemize}
 
-%% COLES ADVANCED ANALYTICS
-\subsection{InfoCentric (Nov 2018 to Jan 2019): Data Scientist}
+%% coles aa
+\subsection{InfoCentric (Nov 2018 to Jan 2019): Data Scientist in Coles Advances Analytics}
+\textbf{Responsibilities:}
+
 \begin{itemize}
     \item Productionising models on in-house RStudio server using proprietary R package to manage models. (Proprietary Model Store, R, RStudio, Git)
     \item Documenting models and their update process. (Confluence)
 \end{itemize}
 
-%% CHE Proximity 
+%% che proximity
 \subsection{CHE Proximity (Jan 2014 to Nov 2018): Data Scientist}
+\textbf{Responsibilities:}
 
 \begin{itemize}
     \item Propensity modelling for customer churn, next best product and repurchase using machine learning techniques (Telstra)
+    \item Churn, cross-sell and repurchase prediction models for mobile phone, mobile internet, landline and fixed broadband internet services. Production-ready code development for monthly update of model. Post implementation review of models. Tool used: SAS Suite. (Telstra).
     \item Customer segmentation using the classical recency-frequency-monetary model as well as clustering algorithms (Mazda)
-    \item Developed an automated website traffic report using the Google Analytics API (Telstra)
+    \item Developed automated website traffic report using the Google Analytics API for Telstra's two business-focussed blog site "Smarter Business". (Telstra)
+    \item Website tagging testing and design for Telstra Smarter Business website. (Telstra)
     \item Used Monte-Carlo simulation in conjunction with linear regression and AdaBoost to find the optimum combination of data transformations (ad stocking, response lag, logarithmic scaling) (AGL Energy)
-    \item Worked at client site to pick up reporting from departing employee and advance client's web analytics reporting capability (Latitude Financial)
+    \item Website A/B testing using Ensighten. Automated web traffic reporting using R and Google Analytics API. (Latitude Financial)
     \item Introduced Kaggle data science competitions to the data team and lead the way by producing a hand-written digit recognition algorithm using random forest and neural network machine learning algorithms
     \item Mentorship of juniors: there have been many new hires to the data team and each requires technical tutorship and guidance on stakeholder management. I've been involved in this process throughout my time at CHE
 \end{itemize}
@@ -109,7 +139,7 @@ Client: Coles Financial Services
 %% Torque Data 
 \subsection{Torque Data (Jun 2008 to Jan 2014): Marketing Analyst}
 
-Responsibilities:
+\textbf{Responsibilities:}
 \begin{itemize}
     \item Customer profiling and segmentation (Multiple clients including Officeworks and Luxbet) 
     \item Campaign management: create target lists, post-campaign reporting, interpreting and presenting results (Multiple clients including Officeworks and Apparel Group)
@@ -119,7 +149,7 @@ Responsibilities:
 %% DSE 
 \subsection{Department of Sustainability and Environment (Sep 2007 to Jun 2008): Statistician}
 
-Responsibilities:
+\textbf{Responsibilities:}
 \begin{itemize}
     \item Land value trend analysis for state government.
     \item The state government uses this report to understand the value of Victorian Crown land.
@@ -129,6 +159,6 @@ Responsibilities:
 \section{Education}
 \textbf{Bachelor of Mathematical and Statistical Sciences}
 \\
-Double Major: Mathematics and Statistics
+Double Major: Mathematics and Statistics. Completed honours year coursework in Statistics.
 
 \end{document}
